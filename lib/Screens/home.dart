@@ -1,3 +1,7 @@
+// ignore_for_file: unnecessary_const
+
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 // function to trigger app build
@@ -38,38 +42,35 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
-            const DrawerHeader(
+            // const DrawerHeader(),
+            //   // decoration: BoxDecoration(
+            //   //   image: DecorationImage(
+            //   //     image: NetworkImage("https://picsum.photos/250?image=69"),
+            //   //     fit: BoxFit.cover,
+            //   //   ),
+            //   // ),
+            const UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                // image: DecorationImage(
-                //   image: NetworkImage("https://picsum.photos/250?image=9"),
-                //   fit: BoxFit.cover,
-                // ),
-                color: Color.fromARGB(255, 46, 70, 89),
-              ), //BoxDecoration
-              child: UserAccountsDrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                ),
-                currentAccountPictureSize: Size.square(80),
-                currentAccountPicture: Center(
-                  child: CircleAvatar(
-                    radius: 58,
-                    backgroundImage:
-                        NetworkImage("https://picsum.photos/250?image=9"),
-                  ),
-                ),
-                accountName: Center(
-                  child: Text(
-                    "Amrit Adhikari",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-                accountEmail: Center(
-                  child: Text("awmrit@gmail.com"),
+                color: Color.fromARGB(255, 74, 81, 87),
+                image: const DecorationImage(
+                  image: const NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmI389MmFguMK_PPYYmok7kiUyKTZIdZRH2A&usqp=CAU'),
+                  fit: BoxFit.cover,
                 ),
               ),
+              accountName: Text(
+                "Amrit Adhikari",
+                style: TextStyle(fontSize: 18),
+              ),
+              accountEmail: Text("awmrit@gmail.com"),
+              currentAccountPictureSize: Size.square(60),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage:
+                    NetworkImage("https://picsum.photos/250?image=9"),
+              ),
             ),
+
+            const SizedBox(height: 3),
             ListTile(
               leading: const Icon(Icons.person),
               title: const Text(' My Profile '),
