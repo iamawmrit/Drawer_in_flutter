@@ -1,4 +1,4 @@
-import 'package:practise/main.dart';
+import 'package:practise/Screens/home.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -16,10 +16,10 @@ class Splash extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               alignment: Alignment.center,
             ),
-            child: const Text('Go to main'),
+            child: const Text('Go to Home Page'),
             onPressed: () {
               Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => const LoginPage()));
+                  MaterialPageRoute(builder: (context) => const Home()));
             }),
       ),
     );
