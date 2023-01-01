@@ -39,6 +39,7 @@ class MyHomePage extends StatelessWidget {
         style: TextStyle(fontSize: 20.0),
       )),
       drawer: Drawer(
+        width: 200,
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
@@ -115,7 +116,7 @@ class MyHomePage extends StatelessWidget {
             ),
           ],
         ),
-      ), //Drawer
+      ),
     );
   }
 }
