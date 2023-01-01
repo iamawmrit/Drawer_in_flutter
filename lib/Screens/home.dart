@@ -40,23 +40,32 @@ class MyHomePage extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                // image: DecorationImage(
+                //   image: NetworkImage("https://picsum.photos/250?image=9"),
+                //   fit: BoxFit.cover,
+                // ),
+                color: Color.fromARGB(255, 46, 70, 89),
               ), //BoxDecoration
               child: UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Colors.blue),
-                accountName: Text(
-                  "Amrit Adhikari",
-                  style: TextStyle(fontSize: 18),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
                 ),
-                accountEmail: Text("awmrit@gmail.com"),
-                currentAccountPictureSize: Size.square(50),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Color.fromARGB(135, 217, 176, 93),
+                currentAccountPictureSize: Size.square(59),
+                currentAccountPicture: Center(
+                  child: CircleAvatar(
+                    radius: 58,
+                    backgroundImage:
+                        NetworkImage("https://picsum.photos/250?image=9"),
+                  ),
+                ),
+                accountName: Center(
                   child: Text(
-                    "A",
-                    style: TextStyle(fontSize: 30.0, color: Colors.blue),
-                  ), //Text
-                ), //circleAvatar
+                    "Amrit Adhikari",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
+                accountEmail: Center(child: Text("awmrit@gmail.com")),
               ), //UserAccountDrawerHeader
             ), //DrawerHeader
             ListTile(
