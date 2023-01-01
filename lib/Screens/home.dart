@@ -50,7 +50,7 @@ class MyHomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                 ),
-                currentAccountPictureSize: Size.square(59),
+                currentAccountPictureSize: Size.square(80),
                 currentAccountPicture: Center(
                   child: CircleAvatar(
                     radius: 58,
@@ -65,9 +65,11 @@ class MyHomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
-                accountEmail: Center(child: Text("awmrit@gmail.com")),
-              ), //UserAccountDrawerHeader
-            ), //DrawerHeader
+                accountEmail: Center(
+                  child: Text("awmrit@gmail.com"),
+                ),
+              ),
+            ),
             ListTile(
               leading: const Icon(Icons.person),
               title: const Text(' My Profile '),
